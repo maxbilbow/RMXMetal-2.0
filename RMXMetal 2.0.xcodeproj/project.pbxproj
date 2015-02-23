@@ -1,0 +1,798 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		506EC9861A9B286200063A49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506EC9851A9B286200063A49 /* AppDelegate.swift */; };
+		506EC9881A9B286200063A49 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506EC9871A9B286200063A49 /* GameViewController.swift */; };
+		506EC98A1A9B286200063A49 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 506EC9891A9B286200063A49 /* Shaders.metal */; };
+		506EC98D1A9B286200063A49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506EC98B1A9B286200063A49 /* Main.storyboard */; };
+		506EC98F1A9B286200063A49 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506EC98E1A9B286200063A49 /* Images.xcassets */; };
+		506EC9921A9B286200063A49 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 506EC9901A9B286200063A49 /* LaunchScreen.xib */; };
+		506EC99E1A9B286300063A49 /* RMXMetal_2_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506EC99D1A9B286300063A49 /* RMXMetal_2_1Tests.swift */; };
+		506EC9A51A9B289800063A49 /* bridge-RattleGL_3_X.m in Sources */ = {isa = PBXBuildFile; fileRef = 509B0EFE1A9B17CA00680870 /* bridge-RattleGL_3_X.m */; };
+		506EC9A81A9B29A200063A49 /* RMXGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509B0F001A9B240C00680870 /* RMXGameView.swift */; };
+		506EC9AC1A9B2DC100063A49 /* RMXDebugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506EC9AB1A9B2DC100063A49 /* RMXDebugger.swift */; };
+		506EC9AE1A9B2E7200063A49 /* RMXValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506EC9AD1A9B2E7200063A49 /* RMXValue.swift */; };
+		508EE67E1A9BA24500DE921B /* RMXDrawShapes.m in Sources */ = {isa = PBXBuildFile; fileRef = 5066808E1A9B158B0085511D /* RMXDrawShapes.m */; };
+		508EE68A1A9BA40F00DE921B /* RMXDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = 506680811A9B158B0085511D /* RMXDebugger.m */; };
+		508EE68C1A9BA40F00DE921B /* RMXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 506680881A9B158B0085511D /* RMXObject.m */; };
+		508EE68D1A9BA40F00DE921B /* RMXParticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5066808A1A9B158B0085511D /* RMXParticle.m */; };
+		508EE68E1A9BA40F00DE921B /* RMXObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 506680891A9B158B0085511D /* RMXObserver.m */; };
+		508EE6911A9BA40F00DE921B /* RMXPhysics.m in Sources */ = {isa = PBXBuildFile; fileRef = 5066808B1A9B158B0085511D /* RMXPhysics.m */; };
+		508EE6921A9BA40F00DE921B /* RMXWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 506680901A9B158B0085511D /* RMXWorld.m */; };
+		508EE6951A9BAE3200DE921B /* RMXGyro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506EC9A91A9B2D7600063A49 /* RMXGyro.swift */; };
+		508EE6D71A9BBA1400DE921B /* RMXShapeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5066808D1A9B158B0085511D /* RMXShapeObject.m */; };
+		508EE6D81A9BBA2200DE921B /* RMXLightSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 506680841A9B158B0085511D /* RMXLightSource.m */; };
+		508EE6D91A9BBA5700DE921B /* RMXArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 506680801A9B158B0085511D /* RMXArt.m */; };
+		50BCB6AD1A9B5CC4001C2947 /* Maths.metal in Sources */ = {isa = PBXBuildFile; fileRef = 50BCB6AC1A9B5CC4001C2947 /* Maths.metal */; };
+		50BCB6B21A9B62E5001C2947 /* RMXMaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BCB6B11A9B62E5001C2947 /* RMXMaths.m */; };
+		50BCB6B41A9B635D001C2947 /* RMXEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BCB6B31A9B635D001C2947 /* RMXEquations.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		506680691A9B14FF0085511D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 506680491A9B14FF0085511D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 506680501A9B14FF0085511D;
+			remoteInfo = "RMXMetal 2.0";
+		};
+		506EC9981A9B286200063A49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 506680491A9B14FF0085511D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 506EC9801A9B286200063A49;
+			remoteInfo = "RMXMetal 2.1";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		505B862B1A9B707A00F014BF /* RMXDebugger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMXDebugger.h; sourceTree = "<group>"; };
+		505B862C1A9B70EE00F014BF /* RMXObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMXObject.h; sourceTree = "<group>"; };
+		505B862E1A9B719700F014BF /* RMXMouse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMXMouse.h; sourceTree = "<group>"; };
+		505B862F1A9B71DC00F014BF /* RMXArt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMXArt.h; sourceTree = "<group>"; };
+		505B86311A9B71EE00F014BF /* RMXParticle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMXParticle.h; sourceTree = "<group>"; };
+		505B86321A9B71FC00F014BF /* RMXObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMXObserver.h; sourceTree = "<group>"; };
+		505B86331A9B721A00F014BF /* RMXWorld.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMXWorld.h; sourceTree = "<group>"; };
+		505B86341A9B722300F014BF /* RMXPhysics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMXPhysics.h; sourceTree = "<group>"; };
+		505B86351A9B723900F014BF /* RMXDrawable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMXDrawable.h; sourceTree = "<group>"; };
+		505B86431A9B880B00F014BF /* RMXStandardLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMXStandardLib.h; sourceTree = "<group>"; };
+		506680511A9B14FF0085511D /* RMXMetal 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RMXMetal 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		506680681A9B14FF0085511D /* RMXMetal 2.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RMXMetal 2.0Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		506680791A9B157C0085511D /* RMXDataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMXDataTypes.swift; sourceTree = "<group>"; };
+		5066807B1A9B157C0085511D /* RMXMaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMXMaths.h; sourceTree = "<group>"; };
+		5066807D1A9B158B0085511D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5066807E1A9B158B0085511D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5066807F1A9B158B0085511D /* oHeader */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = oHeader; sourceTree = "<group>"; };
+		506680801A9B158B0085511D /* RMXArt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXArt.m; sourceTree = "<group>"; };
+		506680811A9B158B0085511D /* RMXDebugger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXDebugger.m; sourceTree = "<group>"; };
+		506680821A9B158B0085511D /* RMXDisplayProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXDisplayProcessor.m; sourceTree = "<group>"; };
+		506680831A9B158B0085511D /* RMXKeyboardProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXKeyboardProcessor.m; sourceTree = "<group>"; };
+		506680841A9B158B0085511D /* RMXLightSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXLightSource.m; sourceTree = "<group>"; };
+		506680851A9B158B0085511D /* RMXMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXMenu.m; sourceTree = "<group>"; };
+		506680861A9B158B0085511D /* RMXMouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXMouse.m; sourceTree = "<group>"; };
+		506680871A9B158B0085511D /* RMXMouseProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXMouseProcessor.m; sourceTree = "<group>"; };
+		506680881A9B158B0085511D /* RMXObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXObject.m; sourceTree = "<group>"; };
+		506680891A9B158B0085511D /* RMXObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXObserver.m; sourceTree = "<group>"; };
+		5066808A1A9B158B0085511D /* RMXParticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXParticle.m; sourceTree = "<group>"; };
+		5066808B1A9B158B0085511D /* RMXPhysics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXPhysics.m; sourceTree = "<group>"; };
+		5066808D1A9B158B0085511D /* RMXShapeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXShapeObject.m; sourceTree = "<group>"; };
+		5066808E1A9B158B0085511D /* RMXDrawShapes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMXDrawShapes.m; path = "../Objective-C/RMXDrawShapes.m"; sourceTree = "<group>"; };
+		5066808F1A9B158B0085511D /* RMXWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXWindow.m; sourceTree = "<group>"; };
+		506680901A9B158B0085511D /* RMXWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXWorld.m; sourceTree = "<group>"; };
+		5066809B1A9B15B50085511D /* OldGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldGameViewController.m; sourceTree = "<group>"; };
+		506EC9811A9B286200063A49 /* RMXMetal 2.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RMXMetal 2.1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		506EC9841A9B286200063A49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		506EC9851A9B286200063A49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		506EC9871A9B286200063A49 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		506EC9891A9B286200063A49 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		506EC98C1A9B286200063A49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		506EC98E1A9B286200063A49 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		506EC9911A9B286200063A49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		506EC9971A9B286200063A49 /* RMXMetal 2.1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RMXMetal 2.1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		506EC99C1A9B286300063A49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		506EC99D1A9B286300063A49 /* RMXMetal_2_1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMXMetal_2_1Tests.swift; sourceTree = "<group>"; };
+		506EC9A91A9B2D7600063A49 /* RMXGyro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMXGyro.swift; sourceTree = "<group>"; };
+		506EC9AB1A9B2DC100063A49 /* RMXDebugger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMXDebugger.swift; sourceTree = "<group>"; };
+		506EC9AD1A9B2E7200063A49 /* RMXValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMXValue.swift; sourceTree = "<group>"; };
+		506EC9B21A9B317800063A49 /* RMXGyro-swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RMXGyro-swift.h"; path = "../../RMXMetal 2.1/Swift/RMXGyro-swift.h"; sourceTree = "<group>"; };
+		509B0EFD1A9B17CA00680870 /* bridge-RattleGL_3_X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "bridge-RattleGL_3_X.h"; path = "../RMXMetal 2.0/bridge-RattleGL_3_X.h"; sourceTree = "<group>"; };
+		509B0EFE1A9B17CA00680870 /* bridge-RattleGL_3_X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "bridge-RattleGL_3_X.m"; path = "../RMXMetal 2.0/bridge-RattleGL_3_X.m"; sourceTree = "<group>"; };
+		509B0F001A9B240C00680870 /* RMXGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMXGameView.swift; path = "../RMXMetal 2.0/RMXGameView.swift"; sourceTree = "<group>"; };
+		50AEFC9C1A9B8E10003AA51E /* RMXDrawShapes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMXDrawShapes.h; sourceTree = "<group>"; };
+		50BCB6AC1A9B5CC4001C2947 /* Maths.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = Maths.metal; path = Metal/Maths.metal; sourceTree = "<group>"; };
+		50BCB6AE1A9B5FB4001C2947 /* RMXDataTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMXDataTypes.h; sourceTree = "<group>"; };
+		50BCB6B11A9B62E5001C2947 /* RMXMaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXMaths.m; sourceTree = "<group>"; };
+		50BCB6B31A9B635D001C2947 /* RMXEquations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXEquations.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5066804E1A9B14FF0085511D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506680651A9B14FF0085511D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506EC97E1A9B286200063A49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506EC9941A9B286200063A49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		505B862D1A9B717700F014BF /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				5066808F1A9B158B0085511D /* RMXWindow.m */,
+				506680821A9B158B0085511D /* RMXDisplayProcessor.m */,
+				506680831A9B158B0085511D /* RMXKeyboardProcessor.m */,
+				506680851A9B158B0085511D /* RMXMenu.m */,
+				506680871A9B158B0085511D /* RMXMouseProcessor.m */,
+			);
+			name = OSX;
+			sourceTree = "<group>";
+		};
+		505B86361A9B735800F014BF /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				505B862C1A9B70EE00F014BF /* RMXObject.h */,
+				505B862B1A9B707A00F014BF /* RMXDebugger.h */,
+				505B862E1A9B719700F014BF /* RMXMouse.h */,
+				505B86311A9B71EE00F014BF /* RMXParticle.h */,
+				505B86321A9B71FC00F014BF /* RMXObserver.h */,
+				505B86351A9B723900F014BF /* RMXDrawable.h */,
+				505B86341A9B722300F014BF /* RMXPhysics.h */,
+				505B86331A9B721A00F014BF /* RMXWorld.h */,
+				506EC9B21A9B317800063A49 /* RMXGyro-swift.h */,
+				505B862F1A9B71DC00F014BF /* RMXArt.h */,
+				505B86431A9B880B00F014BF /* RMXStandardLib.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		505B86371A9B74B200F014BF /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				50AEFC9C1A9B8E10003AA51E /* RMXDrawShapes.h */,
+				50BCB6AE1A9B5FB4001C2947 /* RMXDataTypes.h */,
+				5066807B1A9B157C0085511D /* RMXMaths.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		506680481A9B14FF0085511D = {
+			isa = PBXGroup;
+			children = (
+				506680931A9B15B50085511D /* Lets Make a GLES game */,
+				5066807C1A9B158B0085511D /* Objective-C */,
+				506680781A9B157C0085511D /* C */,
+				506EC9B11A9B315900063A49 /* Swift */,
+				506EC9821A9B286200063A49 /* RMXMetal 2.1 */,
+				506EC99A1A9B286300063A49 /* RMXMetal 2.1Tests */,
+				506680521A9B14FF0085511D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		506680521A9B14FF0085511D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				506680511A9B14FF0085511D /* RMXMetal 2.0.app */,
+				506680681A9B14FF0085511D /* RMXMetal 2.0Tests.xctest */,
+				506EC9811A9B286200063A49 /* RMXMetal 2.1.app */,
+				506EC9971A9B286200063A49 /* RMXMetal 2.1Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		506680781A9B157C0085511D /* C */ = {
+			isa = PBXGroup;
+			children = (
+				505B86371A9B74B200F014BF /* Headers */,
+				5066808E1A9B158B0085511D /* RMXDrawShapes.m */,
+				50BCB6B31A9B635D001C2947 /* RMXEquations.m */,
+				50BCB6B11A9B62E5001C2947 /* RMXMaths.m */,
+				506680791A9B157C0085511D /* RMXDataTypes.swift */,
+			);
+			name = C;
+			path = "RMXMetal 2.0/C";
+			sourceTree = "<group>";
+		};
+		5066807C1A9B158B0085511D /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				5066807D1A9B158B0085511D /* Info.plist */,
+				5066807E1A9B158B0085511D /* main.m */,
+				5066807F1A9B158B0085511D /* oHeader */,
+				505B862D1A9B717700F014BF /* OSX */,
+				505B86361A9B735800F014BF /* Headers */,
+				506680811A9B158B0085511D /* RMXDebugger.m */,
+				506680861A9B158B0085511D /* RMXMouse.m */,
+				506680881A9B158B0085511D /* RMXObject.m */,
+				5066808A1A9B158B0085511D /* RMXParticle.m */,
+				506680891A9B158B0085511D /* RMXObserver.m */,
+				5066808D1A9B158B0085511D /* RMXShapeObject.m */,
+				506680841A9B158B0085511D /* RMXLightSource.m */,
+				5066808B1A9B158B0085511D /* RMXPhysics.m */,
+				506680901A9B158B0085511D /* RMXWorld.m */,
+				506680801A9B158B0085511D /* RMXArt.m */,
+			);
+			name = "Objective-C";
+			path = "RMXMetal 2.0/Objective-C";
+			sourceTree = "<group>";
+		};
+		506680931A9B15B50085511D /* Lets Make a GLES game */ = {
+			isa = PBXGroup;
+			children = (
+				5066809B1A9B15B50085511D /* OldGameViewController.m */,
+			);
+			name = "Lets Make a GLES game";
+			path = "RMXMetal 2.0/Lets Make a GLES game";
+			sourceTree = "<group>";
+		};
+		506EC9821A9B286200063A49 /* RMXMetal 2.1 */ = {
+			isa = PBXGroup;
+			children = (
+				509B0EFD1A9B17CA00680870 /* bridge-RattleGL_3_X.h */,
+				509B0EFE1A9B17CA00680870 /* bridge-RattleGL_3_X.m */,
+				506EC9851A9B286200063A49 /* AppDelegate.swift */,
+				506EC9871A9B286200063A49 /* GameViewController.swift */,
+				506EC9891A9B286200063A49 /* Shaders.metal */,
+				50BCB6AC1A9B5CC4001C2947 /* Maths.metal */,
+				506EC98B1A9B286200063A49 /* Main.storyboard */,
+				506EC98E1A9B286200063A49 /* Images.xcassets */,
+				506EC9901A9B286200063A49 /* LaunchScreen.xib */,
+				506EC9831A9B286200063A49 /* Supporting Files */,
+			);
+			path = "RMXMetal 2.1";
+			sourceTree = "<group>";
+		};
+		506EC9831A9B286200063A49 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				506EC9841A9B286200063A49 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		506EC99A1A9B286300063A49 /* RMXMetal 2.1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				506EC99D1A9B286300063A49 /* RMXMetal_2_1Tests.swift */,
+				506EC99B1A9B286300063A49 /* Supporting Files */,
+			);
+			path = "RMXMetal 2.1Tests";
+			sourceTree = "<group>";
+		};
+		506EC99B1A9B286300063A49 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				506EC99C1A9B286300063A49 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		506EC9B11A9B315900063A49 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				509B0F001A9B240C00680870 /* RMXGameView.swift */,
+				506EC9AD1A9B2E7200063A49 /* RMXValue.swift */,
+				506EC9A91A9B2D7600063A49 /* RMXGyro.swift */,
+				506EC9AB1A9B2DC100063A49 /* RMXDebugger.swift */,
+			);
+			name = Swift;
+			path = "RMXMetal 2.1";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		506680501A9B14FF0085511D /* RMXMetal 2.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 506680721A9B14FF0085511D /* Build configuration list for PBXNativeTarget "RMXMetal 2.0" */;
+			buildPhases = (
+				5066804D1A9B14FF0085511D /* Sources */,
+				5066804E1A9B14FF0085511D /* Frameworks */,
+				5066804F1A9B14FF0085511D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RMXMetal 2.0";
+			productName = "RMXMetal 2.0";
+			productReference = 506680511A9B14FF0085511D /* RMXMetal 2.0.app */;
+			productType = "com.apple.product-type.application";
+		};
+		506680671A9B14FF0085511D /* RMXMetal 2.0Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 506680751A9B14FF0085511D /* Build configuration list for PBXNativeTarget "RMXMetal 2.0Tests" */;
+			buildPhases = (
+				506680641A9B14FF0085511D /* Sources */,
+				506680651A9B14FF0085511D /* Frameworks */,
+				506680661A9B14FF0085511D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5066806A1A9B14FF0085511D /* PBXTargetDependency */,
+			);
+			name = "RMXMetal 2.0Tests";
+			productName = "RMXMetal 2.0Tests";
+			productReference = 506680681A9B14FF0085511D /* RMXMetal 2.0Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		506EC9801A9B286200063A49 /* RMXMetal 2.1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 506EC99F1A9B286300063A49 /* Build configuration list for PBXNativeTarget "RMXMetal 2.1" */;
+			buildPhases = (
+				506EC97D1A9B286200063A49 /* Sources */,
+				506EC97E1A9B286200063A49 /* Frameworks */,
+				506EC97F1A9B286200063A49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RMXMetal 2.1";
+			productName = "RMXMetal 2.1";
+			productReference = 506EC9811A9B286200063A49 /* RMXMetal 2.1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		506EC9961A9B286200063A49 /* RMXMetal 2.1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 506EC9A21A9B286300063A49 /* Build configuration list for PBXNativeTarget "RMXMetal 2.1Tests" */;
+			buildPhases = (
+				506EC9931A9B286200063A49 /* Sources */,
+				506EC9941A9B286200063A49 /* Frameworks */,
+				506EC9951A9B286200063A49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				506EC9991A9B286200063A49 /* PBXTargetDependency */,
+			);
+			name = "RMXMetal 2.1Tests";
+			productName = "RMXMetal 2.1Tests";
+			productReference = 506EC9971A9B286200063A49 /* RMXMetal 2.1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		506680491A9B14FF0085511D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Rattle Media Ltd";
+				TargetAttributes = {
+					506680501A9B14FF0085511D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					506680671A9B14FF0085511D = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 506680501A9B14FF0085511D;
+					};
+					506EC9801A9B286200063A49 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					506EC9961A9B286200063A49 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 506EC9801A9B286200063A49;
+					};
+				};
+			};
+			buildConfigurationList = 5066804C1A9B14FF0085511D /* Build configuration list for PBXProject "RMXMetal 2.0" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 506680481A9B14FF0085511D;
+			productRefGroup = 506680521A9B14FF0085511D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				506680501A9B14FF0085511D /* RMXMetal 2.0 */,
+				506680671A9B14FF0085511D /* RMXMetal 2.0Tests */,
+				506EC9801A9B286200063A49 /* RMXMetal 2.1 */,
+				506EC9961A9B286200063A49 /* RMXMetal 2.1Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5066804F1A9B14FF0085511D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506680661A9B14FF0085511D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506EC97F1A9B286200063A49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506EC98D1A9B286200063A49 /* Main.storyboard in Resources */,
+				506EC9921A9B286200063A49 /* LaunchScreen.xib in Resources */,
+				506EC98F1A9B286200063A49 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506EC9951A9B286200063A49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5066804D1A9B14FF0085511D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506680641A9B14FF0085511D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506EC97D1A9B286200063A49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				508EE68C1A9BA40F00DE921B /* RMXObject.m in Sources */,
+				508EE6951A9BAE3200DE921B /* RMXGyro.swift in Sources */,
+				508EE6921A9BA40F00DE921B /* RMXWorld.m in Sources */,
+				508EE6D91A9BBA5700DE921B /* RMXArt.m in Sources */,
+				506EC98A1A9B286200063A49 /* Shaders.metal in Sources */,
+				506EC9881A9B286200063A49 /* GameViewController.swift in Sources */,
+				508EE67E1A9BA24500DE921B /* RMXDrawShapes.m in Sources */,
+				506EC9A81A9B29A200063A49 /* RMXGameView.swift in Sources */,
+				506EC9AC1A9B2DC100063A49 /* RMXDebugger.swift in Sources */,
+				508EE6D71A9BBA1400DE921B /* RMXShapeObject.m in Sources */,
+				50BCB6B21A9B62E5001C2947 /* RMXMaths.m in Sources */,
+				508EE68D1A9BA40F00DE921B /* RMXParticle.m in Sources */,
+				508EE6D81A9BBA2200DE921B /* RMXLightSource.m in Sources */,
+				50BCB6B41A9B635D001C2947 /* RMXEquations.m in Sources */,
+				506EC9AE1A9B2E7200063A49 /* RMXValue.swift in Sources */,
+				506EC9A51A9B289800063A49 /* bridge-RattleGL_3_X.m in Sources */,
+				508EE6911A9BA40F00DE921B /* RMXPhysics.m in Sources */,
+				508EE68E1A9BA40F00DE921B /* RMXObserver.m in Sources */,
+				50BCB6AD1A9B5CC4001C2947 /* Maths.metal in Sources */,
+				508EE68A1A9BA40F00DE921B /* RMXDebugger.m in Sources */,
+				506EC9861A9B286200063A49 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506EC9931A9B286200063A49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				506EC99E1A9B286300063A49 /* RMXMetal_2_1Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5066806A1A9B14FF0085511D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 506680501A9B14FF0085511D /* RMXMetal 2.0 */;
+			targetProxy = 506680691A9B14FF0085511D /* PBXContainerItemProxy */;
+		};
+		506EC9991A9B286200063A49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 506EC9801A9B286200063A49 /* RMXMetal 2.1 */;
+			targetProxy = 506EC9981A9B286200063A49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		506EC98B1A9B286200063A49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				506EC98C1A9B286200063A49 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		506EC9901A9B286200063A49 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				506EC9911A9B286200063A49 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		506680701A9B14FF0085511D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		506680711A9B14FF0085511D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		506680731A9B14FF0085511D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "RMXMetal 2.0/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Max/Library/Mobile Documents/com~apple~CloudDocs/RMXLib/RMXKit/RMXMetal 2.0/RMXMetal 2.0/bridge-RattleGL_3_X.h";
+			};
+			name = Debug;
+		};
+		506680741A9B14FF0085511D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "RMXMetal 2.0/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/Max/Library/Mobile Documents/com~apple~CloudDocs/RMXLib/RMXKit/RMXMetal 2.0/RMXMetal 2.0/bridge-RattleGL_3_X.h";
+			};
+			name = Release;
+		};
+		506680761A9B14FF0085511D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RMXMetal 2.0Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RMXMetal 2.0.app/RMXMetal 2.0";
+			};
+			name = Debug;
+		};
+		506680771A9B14FF0085511D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RMXMetal 2.0Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RMXMetal 2.0.app/RMXMetal 2.0";
+			};
+			name = Release;
+		};
+		506EC9A01A9B286300063A49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RMXMetal 2.1/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/Max/Library/Mobile Documents/com~apple~CloudDocs/RMXLib/RMXKit/RMXMetal 2.0/RMXMetal 2.0/bridge-RattleGL_3_X.h";
+			};
+			name = Debug;
+		};
+		506EC9A11A9B286300063A49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "RMXMetal 2.1/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/Max/Library/Mobile Documents/com~apple~CloudDocs/RMXLib/RMXKit/RMXMetal 2.0/RMXMetal 2.0/bridge-RattleGL_3_X.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[sdk=*]" = "/Users/Max/Library/Mobile Documents/com~apple~CloudDocs/RMXLib/RMXKit/RMXMetal 2.0/RMXMetal 2.0/bridge-RattleGL_3_X.h";
+			};
+			name = Release;
+		};
+		506EC9A31A9B286300063A49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RMXMetal 2.1Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RMXMetal 2.1.app/RMXMetal 2.1";
+			};
+			name = Debug;
+		};
+		506EC9A41A9B286300063A49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RMXMetal 2.1Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RMXMetal 2.1.app/RMXMetal 2.1";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5066804C1A9B14FF0085511D /* Build configuration list for PBXProject "RMXMetal 2.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				506680701A9B14FF0085511D /* Debug */,
+				506680711A9B14FF0085511D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		506680721A9B14FF0085511D /* Build configuration list for PBXNativeTarget "RMXMetal 2.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				506680731A9B14FF0085511D /* Debug */,
+				506680741A9B14FF0085511D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		506680751A9B14FF0085511D /* Build configuration list for PBXNativeTarget "RMXMetal 2.0Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				506680761A9B14FF0085511D /* Debug */,
+				506680771A9B14FF0085511D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		506EC99F1A9B286300063A49 /* Build configuration list for PBXNativeTarget "RMXMetal 2.1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				506EC9A01A9B286300063A49 /* Debug */,
+				506EC9A11A9B286300063A49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		506EC9A21A9B286300063A49 /* Build configuration list for PBXNativeTarget "RMXMetal 2.1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				506EC9A31A9B286300063A49 /* Debug */,
+				506EC9A41A9B286300063A49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 506680491A9B14FF0085511D /* Project object */;
+}
