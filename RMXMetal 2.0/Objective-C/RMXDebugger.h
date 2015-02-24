@@ -12,10 +12,11 @@
 
 #endif
 
+
 #define RMX_DEBUGGING           0
 #define RMX_FULL_SCREEN         1
 
-
+#define RMX_MONITOR             0
 #define RMX_TOTAL_CHECKS        7
 #define RMX_ERROR               0
 #define RMX_OBSERVER            1
@@ -61,6 +62,8 @@
 #endif
 
 -(void)add:(int)index n:(id)name t:(NSString*)text;//, ...;
+
++(void)add:(int)index n:(NSObject*)object t:(NSString*)text;
 @end
 
 static float _dt = 0;

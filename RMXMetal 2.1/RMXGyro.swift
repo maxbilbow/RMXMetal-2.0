@@ -46,23 +46,24 @@ class RMXGyro : CMMotionManager, _RMXGyro {
         if (particle.effectedByAccelerometer) {
             var vector: [Float] = [ 0, 0, 0];
             if self.deviceMotion != nil {
-
+                //particle.physics.description
                 vector = [ -Float(self.accelerometerData!.acceleration.x),
                     -Float(self.accelerometerData!.acceleration.y),
                     -Float(self.accelerometerData!.acceleration.z)]
                 //TODO: set to particle                 
                 //particle.body.orientation =
+                    particle.accelerateForward(vector[0])
+                    particle.accelerateLeft(vector[1])
                 
-                
-                RMXLog("--- Accelerometer Data")
-                RMXLog("Motion: x\(self.deviceMotion!.userAcceleration.x.toData()), y\(self.deviceMotion!.userAcceleration.y.toData()), z\(self.deviceMotion!.userAcceleration.z.toData())")
+                NSLog("--- Accelerometer Data")
+                NSLog("Motion: x\(self.deviceMotion!.userAcceleration.x.toData()), y\(self.deviceMotion!.userAcceleration.y.toData()), z\(self.deviceMotion!.userAcceleration.z.toData())")
             }
             if self.accelerometerData? != nil {
                 let dp = "04.1"
-                RMXLog("Acceleration: x\(self.accelerometerData!.acceleration.x.toData()), y\(self.accelerometerData!.acceleration.y.toData()), z\(self.accelerometerData!.acceleration.z.toData())")
-                RMXLog("=> upVector: x\(vector[0].toData(dp: dp)), y\(vector[1].toData(dp: dp)), z\(vector[2].toData(dp: dp))")
+                NSLog("Acceleration: x\(self.accelerometerData!.acceleration.x.toData()), y\(self.accelerometerData!.acceleration.y.toData()), z\(self.accelerometerData!.acceleration.z.toData())")
+                NSLog("=> upVector: x\(vector[0].toData(dp: dp)), y\(vector[1].toData(dp: dp)), z\(vector[2].toData(dp: dp))")
             }
-            RMXLog(particle.describePosition())
+            //NSLog(particle.describePosition())
         }
     }
     
@@ -74,15 +75,17 @@ class RMXGyro : CMMotionManager, _RMXGyro {
 //            (parent! as Particle).upVector[2] = -Float(self.accelerometerData!.acceleration.z)
             
             
-        RMXLog("--- Accelerometer Data")
-        RMXLog("Motion: x\(self.deviceMotion!.userAcceleration.x.toData()), y\(self.deviceMotion!.userAcceleration.y.toData()), z\(self.deviceMotion!.userAcceleration.z.toData())")
+        RMXLog(self, "--- Accelerometer Data")
+        RMXLog(self,"Motion: x\(self.deviceMotion!.userAcceleration.x.toData()), y\(self.deviceMotion!.userAcceleration.y.toData()), z\(self.deviceMotion!.userAcceleration.z.toData())")
         }
         if self.accelerometerData? != nil {
             let dp = "04.1"
-            RMXLog("Acceleration: x\(self.accelerometerData!.acceleration.x.toData()), y\(self.accelerometerData!.acceleration.y.toData()), z\(self.accelerometerData!.acceleration.z.toData())")
+            RMXLog(self,"Acceleration: x\(self.accelerometerData!.acceleration.x.toData()), y\(self.accelerometerData!.acceleration.y.toData()), z\(self.accelerometerData!.acceleration.z.toData())")
         //    RMXLog("=> upVector: x\((parent! as RMXSprite).upVector[0].toData(dp: dp)), y\((parent! as RMXSprite).upVector[1].toData(dp: dp)), z\((parent! as RMXSprite).upVector[2].toData(dp: dp))")
         }
-        RMXLog("No motion?!")
+        else {
+         RMXLog(self,"No motion?!")
+        }
     }
         
 //        if (self.attitude? != nil){// && (self.attitude?.rotationMatrix != nil) {

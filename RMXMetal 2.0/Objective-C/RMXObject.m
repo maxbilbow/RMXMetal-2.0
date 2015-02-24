@@ -22,11 +22,12 @@
 //#import "RMXPhysics.h"
 //#import "RMXWorld.h"
 //#import "RMXObject.h"
+@class RMXGyro;
 #import "RMXStandardLib.h"
 
 
 @implementation RMXObject : NSObject
-@synthesize  name = _name, parent = _parent, world = _world, physics = _physics, isAnimated = _isAnimated,gameView = _gameView;
+@synthesize  name = _name, parent = _parent, world = _world, physics = _physics, isAnimated = _isAnimated,gameView = _gameView, gyro = _gyro;
 //#if TARGET_OS_IPHONE
 @synthesize uiView = _uiView;
 //#endif
@@ -42,12 +43,14 @@
         if ([parent isKindOfClass:[UIViewController class]]) {
             _uiView = (UIViewController*) parent;
       //  if ([parent isKindOfClass:[RMXGameView class]])
-             _gameView = ((RMXWorld*)world).gameView;
+             _gameView = (RMXGameView*) parent;
+            //_gyro = _gameView.gyro;
         }
     }
 #endif
+    if (((RMXWorld*)world).gyro != nil) _gyro = world.gyro; else { NSLog(@"Everone needs a gyro");/* exit(0);*/}
     _name = name;
-    _physics = (world != nil) ? world.physics : [[RMXPhysics alloc]initWithName:@"Root Node" parent:parent world: [self isKindOfClass:[RMXWorld class]] ? (RMXWorld*) self : nil];
+    _physics = (world != nil) ? world : [[RMXPhysics alloc]initWithName:@"Root Node" parent:parent world: [self isKindOfClass:[RMXWorld class]] ? (RMXWorld*) self : nil];
     [self reInit];
         return self;
 }
@@ -77,6 +80,11 @@
 - (GLKVector3)forwardVector{
     GLKVector4 v = GLKMatrix4GetColumn(GLKMatrix4Transpose(body.orientation),2);
     return GLKVector3Make(v.x,v.y,v.z);
+}
+
+- (CATransform3D)matrixView {
+    CATransform3D m;
+    return m;
 }
 
 @end

@@ -26,6 +26,7 @@
 @property NSString* observerName;
 @property (readonly)RMXObserver* observer;
 @property float dt;
+- (id)initWithUI:(RMXGameView*)view;
 - (RMXObject*)closestObjectTo:(RMXParticle*)sender;
 - (void)animate;
 - (void)insertSprite:(RMXParticle*)sprite;

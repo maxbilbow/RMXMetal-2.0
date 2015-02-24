@@ -29,7 +29,7 @@
      - Right
      */
 #if TARGET_OS_IPHONE
-@synthesize gyro = _gyro;
+
 #else
 @synthesize mouse;
 #endif
@@ -46,10 +46,20 @@
         //self.ground=1;
 #endif
     }
-    [self debug];
+    //[self debug];
     return self;
 }
-    
+
+- (id)initWithUI:(RMXGameView*)gameView
+{
+    self = [super initWithName:@"Your mum." parent:(RMXObject*)gameView world:nil];
+    if (self) {
+        [self reInit];
+    }
+    return self;
+}
+
+
 - (void)reInit {
     [super reInit];
 //#if TARGET_OS_IPHONE
@@ -166,11 +176,12 @@ bool _itemWasAnimated = false;
 #endif
 - (void)debug{
 //    [super debug];
-    [rmxDebugger add:RMX_OBSERVER n:self t: self.describePosition];
-    [rmxDebugger add:RMX_OBSERVER n:self t: self.viewDescription];
+    [RMXDebugger add:RMX_OBSERVER n:self t: self.describePosition];
+    [RMXDebugger add:RMX_OBSERVER n:self t: self.viewDescription];
 }
 
 - (NSString*)viewDescription {
+    if( self == nil )return @"Balls";
     return [NSString stringWithFormat:@"\n      EYE x%f, y%f, z%f\n   CENTRE x%f, y%f, z%f\n      UP: x%f, y%f, z%f\n",
             [self eye].x,[self eye].y,[self eye].z,
             [self center].x,[self center].y,[self center].z,

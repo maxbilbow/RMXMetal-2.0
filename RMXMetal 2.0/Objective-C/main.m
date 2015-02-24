@@ -128,7 +128,7 @@ int main (int argc, char **argv) {
 void debug(){
     [observer.item debug];
     [observer debug];
-    [rmxDebugger feedback];
+    //[rmxDebugger feedback];
 };
 
 

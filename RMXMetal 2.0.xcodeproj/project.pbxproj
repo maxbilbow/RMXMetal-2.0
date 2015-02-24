@@ -29,6 +29,11 @@
 		508EE6D71A9BBA1400DE921B /* RMXShapeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5066808D1A9B158B0085511D /* RMXShapeObject.m */; };
 		508EE6D81A9BBA2200DE921B /* RMXLightSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 506680841A9B158B0085511D /* RMXLightSource.m */; };
 		508EE6D91A9BBA5700DE921B /* RMXArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 506680801A9B158B0085511D /* RMXArt.m */; };
+		50B9CFD21A9BC67D00DB34D9 /* RMXMetalWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9CFD01A9BC47F00DB34D9 /* RMXMetalWorld.swift */; };
+		50B9CFD31A9BC68200DB34D9 /* RMXMetalMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9CFCE1A9BC07200DB34D9 /* RMXMetalMan.swift */; };
+		50B9CFD61A9BD01600DB34D9 /* RMXPhysicsBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9CFD41A9BD01300DB34D9 /* RMXPhysicsBody.swift */; };
+		50B9CFD81A9BD12500DB34D9 /* RMXMatrixMaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9CFD71A9BD12500DB34D9 /* RMXMatrixMaths.swift */; };
+		50B9CFDB1A9BDC4800DB34D9 /* RMXMetalPhysics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B9CFD91A9BDC0C00DB34D9 /* RMXMetalPhysics.swift */; };
 		50BCB6AD1A9B5CC4001C2947 /* Maths.metal in Sources */ = {isa = PBXBuildFile; fileRef = 50BCB6AC1A9B5CC4001C2947 /* Maths.metal */; };
 		50BCB6B21A9B62E5001C2947 /* RMXMaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BCB6B11A9B62E5001C2947 /* RMXMaths.m */; };
 		50BCB6B41A9B635D001C2947 /* RMXEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 50BCB6B31A9B635D001C2947 /* RMXEquations.m */; };
@@ -105,6 +110,11 @@
 		509B0EFE1A9B17CA00680870 /* bridge-RattleGL_3_X.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "bridge-RattleGL_3_X.m"; path = "../RMXMetal 2.0/bridge-RattleGL_3_X.m"; sourceTree = "<group>"; };
 		509B0F001A9B240C00680870 /* RMXGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMXGameView.swift; path = "../RMXMetal 2.0/RMXGameView.swift"; sourceTree = "<group>"; };
 		50AEFC9C1A9B8E10003AA51E /* RMXDrawShapes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMXDrawShapes.h; sourceTree = "<group>"; };
+		50B9CFCE1A9BC07200DB34D9 /* RMXMetalMan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMXMetalMan.swift; path = Swift/RMXMetalMan.swift; sourceTree = "<group>"; };
+		50B9CFD01A9BC47F00DB34D9 /* RMXMetalWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMXMetalWorld.swift; path = Swift/RMXMetalWorld.swift; sourceTree = "<group>"; };
+		50B9CFD41A9BD01300DB34D9 /* RMXPhysicsBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMXPhysicsBody.swift; sourceTree = "<group>"; };
+		50B9CFD71A9BD12500DB34D9 /* RMXMatrixMaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMXMatrixMaths.swift; sourceTree = "<group>"; };
+		50B9CFD91A9BDC0C00DB34D9 /* RMXMetalPhysics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMXMetalPhysics.swift; sourceTree = "<group>"; };
 		50BCB6AC1A9B5CC4001C2947 /* Maths.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = Maths.metal; path = Metal/Maths.metal; sourceTree = "<group>"; };
 		50BCB6AE1A9B5FB4001C2947 /* RMXDataTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMXDataTypes.h; sourceTree = "<group>"; };
 		50BCB6B11A9B62E5001C2947 /* RMXMaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXMaths.m; sourceTree = "<group>"; };
@@ -301,6 +311,11 @@
 				506EC9AD1A9B2E7200063A49 /* RMXValue.swift */,
 				506EC9A91A9B2D7600063A49 /* RMXGyro.swift */,
 				506EC9AB1A9B2DC100063A49 /* RMXDebugger.swift */,
+				50B9CFCE1A9BC07200DB34D9 /* RMXMetalMan.swift */,
+				50B9CFD71A9BD12500DB34D9 /* RMXMatrixMaths.swift */,
+				50B9CFD41A9BD01300DB34D9 /* RMXPhysicsBody.swift */,
+				50B9CFD91A9BDC0C00DB34D9 /* RMXMetalPhysics.swift */,
+				50B9CFD01A9BC47F00DB34D9 /* RMXMetalWorld.swift */,
 			);
 			name = Swift;
 			path = "RMXMetal 2.1";
@@ -464,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B9CFD81A9BD12500DB34D9 /* RMXMatrixMaths.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B9CFD21A9BC67D00DB34D9 /* RMXMetalWorld.swift in Sources */,
 				508EE68C1A9BA40F00DE921B /* RMXObject.m in Sources */,
 				508EE6951A9BAE3200DE921B /* RMXGyro.swift in Sources */,
 				508EE6921A9BA40F00DE921B /* RMXWorld.m in Sources */,
@@ -486,11 +503,14 @@
 				506EC9881A9B286200063A49 /* GameViewController.swift in Sources */,
 				508EE67E1A9BA24500DE921B /* RMXDrawShapes.m in Sources */,
 				506EC9A81A9B29A200063A49 /* RMXGameView.swift in Sources */,
+				50B9CFD31A9BC68200DB34D9 /* RMXMetalMan.swift in Sources */,
+				50B9CFDB1A9BDC4800DB34D9 /* RMXMetalPhysics.swift in Sources */,
 				506EC9AC1A9B2DC100063A49 /* RMXDebugger.swift in Sources */,
 				508EE6D71A9BBA1400DE921B /* RMXShapeObject.m in Sources */,
 				50BCB6B21A9B62E5001C2947 /* RMXMaths.m in Sources */,
 				508EE68D1A9BA40F00DE921B /* RMXParticle.m in Sources */,
 				508EE6D81A9BBA2200DE921B /* RMXLightSource.m in Sources */,
+				50B9CFD61A9BD01600DB34D9 /* RMXPhysicsBody.swift in Sources */,
 				50BCB6B41A9B635D001C2947 /* RMXEquations.m in Sources */,
 				506EC9AE1A9B2E7200063A49 /* RMXValue.swift in Sources */,
 				506EC9A51A9B289800063A49 /* bridge-RattleGL_3_X.m in Sources */,

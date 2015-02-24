@@ -12,14 +12,23 @@
 
 #endif
 
-
+@class RMXGyro;
 @protocol RMXObject
 @property (readonly) NSString * name;
 @property RMXObject * parent;
 @property RMXWorld * world;
 @property RMXPhysics * physics;
 @property RMXGameView* gameView;
+@property RMXGyro* gyro;
+
 //@property RMXPhysicsBody body;
+
+@end
+
+@interface RMXObject : NSObject <RMXObject> {
+    @public RMXBody body;
+}
+@property (readonly) CATransform3D matrixView;
 
 @property BOOL isAnimated;
 //#if TARGET_OS_IPHONE
@@ -30,9 +39,4 @@
 - (id)initWithName:(NSString*)name parent:(RMXObject*)parent world:(RMXWorld*)world;
 - (void)debug;
 - (void)reInit;
-@end
-
-@interface RMXObject : NSObject <RMXObject> {
-    @public RMXBody body;
-}
 @end

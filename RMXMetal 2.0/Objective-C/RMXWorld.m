@@ -18,6 +18,13 @@
 
 #import "RMXStandardLib.h"
 
+@class RMXGameView, RMXMetalMan, RMXGyro;
+
+@interface RMXGameView : UIViewController
+@property RMXMetalMan* observer;
+@property RMXGyro* gyro;
+
+@end
 
 @implementation RMXWorld
 @synthesize sprites = _sprites, observerName, dt;//, mainObserver = _mainObserver;
@@ -43,6 +50,26 @@
         exit(1);
     if ([self observer].parent->body.radius == 0)
     exit(0);
+    return self;
+}
+
+- (id)initWithUI:(RMXGameView*)view
+{
+    self = [super initWithName:@"Mum's world" parent:nil world:nil];
+    observerName = @"Main Observer";
+    body.radius = 1000;
+    
+    _sprites = [[NSMutableArray alloc]initWithCapacity:10];
+   // [view.observer setPhysics:self]
+    [_sprites addObject:[view observer]];// inPropertyWithKey:observerName];
+    //eventHandler = [[RMXEventHandler alloc]initWithName:@"Event Handler" parent:self world:self];
+    self.gyro = ((RMXObserver*)view).gyro;
+    self.observer.gyro = self.gyro;
+    self.observer.physics = self;
+//    if (body.radius == 0)
+//        exit(1);
+//    if ([self observer].parent->body.radius == 0)
+//        exit(0);
     return self;
 }
 
@@ -125,7 +152,7 @@
     for (RMXParticle* sprite in _sprites) {
         [sprite animate];
     }
-    [self debug];
+    //[self debug];
 }
 
 - (void)resetWorld{
@@ -153,7 +180,7 @@
     return closest;//shapes[closest];
     }
 - (void)debug {
-    [rmxDebugger add:RMX_WORLD n:self t:[NSString stringWithFormat:@"%@ debug not set up",self.name]];
+    //[RMXDebugger add:RMX_WORLD n:self t:[NSString stringWithFormat:@"%@ debug not set up",self.name]];
     //[rmxDebugger feedback];
    // NSLog(@"Well, hellooo!");
 }

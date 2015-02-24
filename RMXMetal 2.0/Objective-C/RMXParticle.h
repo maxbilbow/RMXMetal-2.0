@@ -13,17 +13,22 @@
 #endif
 
 //@class RMXObject;
+@protocol RMXSwiftUpgrade <RMXObject>
 
+@property CATransform3D orientation, velocity, acceleration; @optional
+
+@end
 
 /*
                                   
  Particle
  */
-@interface RMXParticle : RMXObject // <RMXOrienrationProcessor>
+@interface RMXParticle : RMXObject <RMXSwiftUpgrade>
 @property (readonly) GLKVector3 eye, center, up;
 @property GLKVector3 anchor,itemPosition;
 @property RMXObject  * item; //return 1?;
 @property (readonly) float weight, ground;
+
 @property float armLength, reach, accelerationRate, speedLimit, squatLevel,rotationSpeed,jumpStrength;
 @property BOOL limitSpeed, hasFriction, hasGravity, prepairingToJump, goingUp, effectedByAccelerometer;
 - (void)accelerateForward:(float)velocity;

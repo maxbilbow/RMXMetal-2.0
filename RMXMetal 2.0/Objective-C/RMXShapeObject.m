@@ -107,7 +107,7 @@
 
 - (void)debug {
     [super debug];
-    [rmxDebugger add:RMX_OBSERVER n:self t:[self describePosition] ];
+    [RMXDebugger add:RMX_OBSERVER n:self t:[self describePosition] ];
 }
 
 

@@ -47,7 +47,7 @@
 - (void)lightUp:(float)i
 {
     body.position = GLKVector3Make(body.position.x + i,body.position.y,body.position.z);
-    [rmxDebugger add:RMX_LIGHT n:self.name t:[NSString stringWithFormat:@" Light Y: %f", body.position.x]];
+    [RMXDebugger add:RMX_LIGHT n:self.name t:[NSString stringWithFormat:@" Light Y: %f", body.position.x]];
 }
 - (void)lightSwitch:(char)i
 {
@@ -91,7 +91,7 @@
 }
 
 - (void)debug {
-    [rmxDebugger add:RMX_LIGHT n:self t:[NSString stringWithFormat:@"%@ debug not set up",self.name]];
+    [RMXDebugger add:RMX_LIGHT n:self t:[NSString stringWithFormat:@"%@ debug not set up",self.name]];
 }
 
 

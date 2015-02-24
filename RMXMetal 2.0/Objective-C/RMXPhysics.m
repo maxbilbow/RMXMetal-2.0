@@ -12,13 +12,17 @@
 
 @implementation RMXPhysics
 
-@synthesize gravity = _gravity;//, hasFriction = _hasFriction, hasGravity = _hasGravity;
+@synthesize gravity = _gravity,gVector = _gVector;//, hasFriction = _hasFriction, hasGravity = _hasGravity;
 - (id)initWithName:(NSString*)name  parent:(RMXObject*)parent world:(RMXWorld*)world
 {
     self = [super initWithName:name parent:parent world:world];
     if (self) {
         _gravity = 0.098;//U_GRAVITY;
-        NSLog(@"init Physics");
+    //NSLog(@"init Physics");
+        _gVector = alloca(3*sizeof(float));
+        _gVector[0]=_gVector[2] = 0;
+        _gVector[1]=1;
+        
     }
     return self;
 }
@@ -36,7 +40,7 @@
 
 
 - (void)debug {
-    [rmxDebugger add:RMX_PHYSICS n:self t:[NSString stringWithFormat:@"%@ debug not set up",self.name]];
+    [RMXDebugger add:RMX_PHYSICS n:self t:[NSString stringWithFormat:@"%@ debug not set up",self.name]];
 }
 
 

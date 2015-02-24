@@ -122,6 +122,62 @@ Loop loop;
     checks[index] = [NSString stringWithFormat:@"%@ %@        %@\n",checks[index],s, text];
 }
 
+
++(void)add:(int)index n:(NSObject*)object t:(NSString*)text
+{
+    if (!RMX_DEBUGGING||index!=RMX_MONITOR) return;
+    NSString* name = [object isKindOfClass:[RMXObject class]] ? ((RMXObject*) object).name : object.description;
+    NSString * s = ![name isEqualToString: priorName] ? [NSString stringWithFormat:@"\n%@:\n ", name] : @"";
+    //priorName = name;
+    //[self print:[NSString stringWithFormat
+   
+    NSLog(@"%@\n::        %@\n",s, text);//]];
+    
+}
+
++ (void)print:(NSString*)log
+{
+    
+    //if (![log isEqualToString:lastCheck] || [self newLoopAverage]) {
+        NSLog(@"\nDEBUG #%i \n%@\n%@", monitor, checks[monitor],doesDebugLoop ? loopLog : @"");
+        if (doesDebugLoop) {
+            const char * c = [loopLog UTF8String];
+            const long len = [loopLog length];
+            printf("%c\n",c[len]);
+        }
+//    }
+//    lastCheck = checks[monitor];
+//    checks[monitor] = @"";
+    
+}
+
++ (bool)newLoopAverage
+{
+    loop.count++;
+    loop.totalTimePassed += _dt;
+    if (loop.count <= loopSampleSize) {
+        return false;
+    } else {
+        loop.count = 0;
+        loop.previousAverage = loop.average;
+        loop.average = loop.totalTimePassed / loopSampleSize;
+        loop.totalTimePassed = 0;
+        const float dl = loop.average - loop.previousAverage;
+        loop.loss += dl;
+        
+        if (dl == 0)
+            return false;
+        else if (dl > 0)
+            loop.diff = '>';
+        else
+            loop.diff = '<';
+        
+        
+        loopLog = [NSString stringWithFormat:@"Loop Time: %f, Average: %f %c %f => Loss of %f (+%f)", _dt, loop.average, loop.diff, loop.previousAverage, loop.loss, dl];
+        
+        return true;
+    }
+}
 @end
 
     

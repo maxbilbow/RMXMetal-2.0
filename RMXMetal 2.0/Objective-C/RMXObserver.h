@@ -36,7 +36,8 @@
 @property RMXMouse *mouse;
 #endif
 @property (readonly) GLKMatrix4 modelViewMatrix, projectionMatrix;
-@property CMMotionManager* gyro;
+
+- (id)initWithUI:(RMXGameView*)gameView;
 - (void)debug;
 - (void)grabObject:(RMXObject*)i;
 - (void)throwItem:(float)strength;
